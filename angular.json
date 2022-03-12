@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bugtrackingAngular": {
+    "BugTrackingAngular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,19 +17,33 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bugtracking-angular",
+            "outputPath": "dist/bug-tracking-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/Login/images/icons/favicon.ico"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css",
+               "src/vendors/bootstrap/dist/css/bootstrap.min.css",
+               "src/vendors/font-awesome/css/font-awesome.min.css",
+               "src/vendors/themify-icons/css/themify-icons.css",
+               "src/vendors/flag-icon-css/css/flag-icon.min.css",
+               "src/vendors/selectFX/css/cs-skin-elastic.css",
+               "src/assets/css/style.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "src/vendors/jquery/dist/jquery.min.js",
+              
+              "src/vendors/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bugtrackingAngular:build:production"
+              "browserTarget": "BugTrackingAngular:build:production"
             },
             "development": {
-              "browserTarget": "bugtrackingAngular:build:development"
+              "browserTarget": "BugTrackingAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bugtrackingAngular:build"
+            "browserTarget": "BugTrackingAngular:build"
           }
         },
         "test": {
@@ -94,13 +108,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"          
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           }
+
         }
       }
     }
   },
-  "defaultProject": "bugtrackingAngular"
+  "defaultProject": "BugTrackingAngular"
 }
