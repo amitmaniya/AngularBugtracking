@@ -14,7 +14,7 @@ export class SessionService {
   }
 
   authentication(user: any): Observable<any> {
-    return this.httpClient.post("http://localhost:3000/login", user)
+    return this.httpClient.get("http://localhost:3000/login", user)
   }
 
   sendOTP(user: any): Observable<any> {

@@ -30,19 +30,26 @@
             "styles": [
               "src/styles.css",
               "node_modules/ngx-toastr/toastr.css",
-               "src/vendors/bootstrap/dist/css/bootstrap.min.css",
-               "src/vendors/font-awesome/css/font-awesome.min.css",
-               "src/vendors/themify-icons/css/themify-icons.css",
-               "src/vendors/flag-icon-css/css/flag-icon.min.css",
-               "src/vendors/selectFX/css/cs-skin-elastic.css",
+               "src/assets/vendors/bootstrap/dist/css/bootstrap.min.css",
+               "src/assets/vendors/font-awesome/css/font-awesome.min.css",
+               "src/assets/vendors/themify-icons/css/themify-icons.css",
+               "src/assets/vendors/flag-icon-css/css/flag-icon.min.css",
+               "src/assets/vendors/selectFX/css/cs-skin-elastic.css",
+               "src/assets/vendors/jqvmap/dist/jqvmap.min.css",
                "src/assets/css/style.css"
 
             ],
             "scripts": [
-              "src/vendors/jquery/dist/jquery.min.js",
-              
-              "src/vendors/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/main.js"
+              "src/assets/vendors/jquery/dist/jquery.min.js",
+              "src/assets/vendors/popper.min.js",
+              "src/assets/vendors/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/main.js",
+              "src/assets/vendors/chart.js/dist/Chart.bundle.min.js",
+              "src/assets/js/dashboard.js",
+              "src/assets/js/widgets.js",
+              "src/assets/vendors/jqvmap/dist/jquery.vmap.min.js",
+              "src/assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js",
+              "src/assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"
             ]
           },
           "configurations": {

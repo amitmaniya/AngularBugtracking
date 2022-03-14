@@ -18,10 +18,6 @@ export class SignupComponent implements OnInit {
   ngOnInit():void{
   }
   adduser(){
-    console.log(this.firstName);
-    console.log(this.email);
-    console.log(this.password);
-
     let user = {"firstName":this.firstName,"email":this.email,"password":this.password,"role":"620dcb8fb06348c8cfc5811f"}
     this.sessionService.addUser(user).subscribe(resp=>{
       console.log(resp);

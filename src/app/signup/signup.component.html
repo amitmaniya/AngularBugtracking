@@ -3,11 +3,11 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
-                        <img class="align-content" src="images/logo.png" alt="">
+                        <!-- <img class="align-content" src="./images/logo.png" alt=""> -->
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    
                         <div class="form-group">
                             <label>User Name</label>
                             <input type="string" class="form-control"[(ngModel)]="firstName" placeholder="User Name">
@@ -25,12 +25,12 @@
                                 <input type="checkbox"> Agree the terms and policy
                             </label>
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+                                    <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30" (click)="adduser()">Register</button>
                                     
                                     <div class="register-link m-t-15 text-center">
                                         <p>Already have account ? <a href="#"><a routinglink="login"> Sign in</a></a></p>
                                     </div>
-                    </form>
+                    
                 </div>
             </div>
         </div>
