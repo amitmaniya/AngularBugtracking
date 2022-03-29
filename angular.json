@@ -30,26 +30,26 @@
             "styles": [
               "src/styles.css",
               "node_modules/ngx-toastr/toastr.css",
-               "src/assets/vendors/bootstrap/dist/css/bootstrap.min.css",
-               "src/assets/vendors/font-awesome/css/font-awesome.min.css",
-               "src/assets/vendors/themify-icons/css/themify-icons.css",
-               "src/assets/vendors/flag-icon-css/css/flag-icon.min.css",
-               "src/assets/vendors/selectFX/css/cs-skin-elastic.css",
-               "src/assets/vendors/jqvmap/dist/jqvmap.min.css",
-               "src/assets/css/style.css"
-
+              "src/assets/vendors/feather/feather.css",
+              "src/assets/vendors/ti-icons/css/themify-icons.css",
+              "src/assets/vendors/css/vendor.bundle.base.css",
+              "src/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css",
+              "src/assets/js/select.dataTables.min.css",           
+              "src/assets/css/vertical-layout-light/style.css"
             ],
             "scripts": [
-              "src/assets/vendors/jquery/dist/jquery.min.js",
-              "src/assets/vendors/popper.min.js",
-              "src/assets/vendors/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/main.js",
-              "src/assets/vendors/chart.js/dist/Chart.bundle.min.js",
-              "src/assets/js/dashboard.js",
-              "src/assets/js/widgets.js",
-              "src/assets/vendors/jqvmap/dist/jquery.vmap.min.js",
-              "src/assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js",
-              "src/assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"
+             "src/assets/vendors/js/vendor.bundle.base.js",
+             "src/assets/vendors/chart.js/Chart.min.js",
+             "src/assets/vendors/datatables.net/jquery.dataTables.js",
+             "src/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js",
+             "src/assets/js/dataTables.select.min.js",
+             "src/assets/js/off-canvas.js",
+             "src/assets/js/hoverable-collapse.js",
+             "src/assets/js/template.js",
+             "src/assets/js/settings.js",
+             "src/assets/js/todolist.js",
+             "src/assets/js/dashboard.js",
+             "src/assets/js/Chart.roundedBarCharts.js"
             ]
           },
           "configurations": {
