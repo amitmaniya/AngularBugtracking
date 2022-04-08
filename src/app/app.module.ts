@@ -25,6 +25,15 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { LogoutComponent } from './logout/logout.component';
+import { PendingProjectComponent } from './admin/pending-project/pending-project.component';
+import { AddModuleComponent } from './admin/add-module/add-module.component';
+import { AddTaskComponent } from './admin/add-task/add-task.component';
+import { AddProjectTeamComponent } from './admin/add-project-team/add-project-team.component';
+import { EditTaskComponent } from './admin/edit-task/edit-task.component';
+import { EditModuleComponent } from './admin/edit-module/edit-module.component';
+import { ListModuleComponent } from './admin/list-module/list-module.component';
+import { ListProjectTeamComponent } from './admin/list-project-team/list-project-team.component';
+import { ListTaskComponent } from './admin/list-task/list-task.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +54,16 @@ import { LogoutComponent } from './logout/logout.component';
     AdminComponent,
     ForgotpasswordComponent,
     ChangepasswordComponent,
-    LogoutComponent
+    LogoutComponent,
+    PendingProjectComponent,
+    AddModuleComponent,
+    AddTaskComponent,
+    AddProjectTeamComponent,
+    EditTaskComponent,
+    EditModuleComponent,
+    ListModuleComponent,
+    ListProjectTeamComponent,
+    ListTaskComponent
   ],
   imports: [
     BrowserModule,

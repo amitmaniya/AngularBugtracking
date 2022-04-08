@@ -21544,7 +21544,7 @@ code {
 
 /* Breadcrumbs */
 .breadcrumb {
-  border: 1px solid #CED4DA;
+  border: 0px solid #CED4DA;
 }
 
 .breadcrumb .breadcrumb-item {
@@ -28378,7 +28378,7 @@ div.tagsinput span.tag a {
 
 .auth .brand-logo {
   margin-bottom: 1rem;
-  margin-left: 70px;
+  margin-left: 130px;
 }
 
 .auth .brand-logo img {
@@ -28445,14 +28445,14 @@ div.tagsinput span.tag a {
 @media (max-width: 991px) {
   .main-panel {
     margin-left: 0;
-    width: 100%;
+    width: 100%; 
   }
 }
 
 .content-wrapper {
   background: #F5F7FF;
   padding: 2.375rem 2.375rem;
-  width: 100%;
+  width: 175%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
 }
