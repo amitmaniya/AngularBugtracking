@@ -30,10 +30,10 @@ export class ListRoleComponent implements OnInit {
   
   editRole(roleId:any){
     this.route.navigateByUrl("/admin/editrole/"+roleId)
-  }
+  } 
   getAllRoles(){
     this.roleService.getAllRoles().subscribe(resp=>{
-     // console.log(resp);
+      console.log(resp);
        this.roles =  resp.data 
     }) 
   }
