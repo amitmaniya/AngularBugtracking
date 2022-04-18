@@ -8,6 +8,11 @@ import { AddTaskComponent } from './admin/add-task/add-task.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { BugReportComponent } from './admin/bug-report/bug-report.component';
+/*import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.component';
+import { AssignModuleComponent } from './admin/assign-module/assign-module.component';
+import { AssignTaskComponent } from './admin/assign-task/assign-task.component';
+import { CompletedProjectComponent } from './admin/completed-project/completed-project.component';*/
 import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
 import { EditRoleComponent } from './admin/edit-role/edit-role.component';
@@ -19,28 +24,40 @@ import { ListRoleComponent } from './admin/list-role/list-role.component';
 import { ListTaskComponent } from './admin/list-task/list-task.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
 import { PendingProjectComponent } from './admin/pending-project/pending-project.component';
-/*import { DevloperReportComponent } from './admin/reports/devloper-report/devloper-report.component';
-import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
-import { CompletedProjectComponent } from './admin/completed-project/completed-project.component';
+import { ProjectReportComponent } from './admin/project-report/project-report.component';
+import { UserReportComponent } from './admin/user-report/user-report.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+/*import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
+import { BugReportComponent } from './admin/reports/bug-report/bug-report.component';
+import { DevloperReportComponent } from './admin/reports/devloper-report/devloper-report.component';
 import { ProjectReportComponent } from './admin/reports/project-report/project-report.component';
 import { TaskReportComponent } from './admin/reports/task-report/task-report.component';
-import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
 import { UserReportComponent } from './admin/reports/user-report/user-report.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';*/
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { DeveloperDashboardComponent } from './developer/developer-dashboard/developer-dashboard.component';
+import { DeveloperComponent } from './developer/developer/developer.component';*/
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-/*import { AddModulesComponent } from './projectManager/add-modules/add-modules.component';
+import { AddModulesComponent } from './projectManager/add-modules/add-modules.component';
+import { AddTasksComponent } from './projectManager/add-tasks/add-tasks.component';
+import { AddTeamMembersComponent } from './projectManager/add-team-members/add-team-members.component';
 import { AddUsersComponent } from './projectManager/add-users/add-users.component';
+import { AssignTasksComponent } from './projectManager/assign-tasks/assign-tasks.component';
 import { CompletedProjectsComponent } from './projectManager/completed-projects/completed-projects.component';
 import { EditModulesComponent } from './projectManager/edit-modules/edit-modules.component';
+import { EditProjectsComponent } from './projectManager/edit-projects/edit-projects.component';
 import { ListModulesComponent } from './projectManager/list-modules/list-modules.component';
 import { ListProjectsComponent } from './projectManager/list-projects/list-projects.component';
+import { ListTasksComponent } from './projectManager/list-tasks/list-tasks.component';
 import { ListUsersComponent } from './projectManager/list-users/list-users.component';
+import { ModulesReportComponent } from './projectManager/modules-report/modules-report.component';
 import { PendingProjectsComponent } from './projectManager/pending-projects/pending-projects.component';
 import { ProjectManagerDashboardComponent } from './projectManager/project-manager-dashboard/project-manager-dashboard.component';
-import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';>*/
+import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
+import { TasksReportComponent } from './projectManager/tasks-report/tasks-report.component';
+import { ViewTeamComponent } from './projectManager/view-team/view-team.component';
 import { SignupComponent } from './signup/signup.component';
 
 
@@ -49,7 +66,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
   { path: "forgotpassword", component: ForgotpasswordComponent },
-  { path: "changepassword", component: ChangepasswordComponent },
+  /*{ path: "changepassword", component: ChangepasswordComponent },*/
   { path: "logout", component: LogoutComponent },
   {
     path: "admin", component: AdminComponent, children: [
@@ -60,6 +77,7 @@ const routes: Routes = [
       { path: "editrole/:roleId", component: EditRoleComponent },
       { path: "adduser", component: AddUserComponent },
       { path: "listuser", component: ListUserComponent },
+      /*{ path: "pending-approval", component: PendingApprovalComponent },*/
       { path: "addproject", component: AddProjectComponent },
       { path: "listproject", component: ListProjectComponent },
       { path: "editproject/:projectId", component: EditProjectComponent },
@@ -71,33 +89,51 @@ const routes: Routes = [
       { path: "edit-task/:taskId", component: EditTaskComponent },
       { path: "list-projectTeam", component: ListProjectTeamComponent },
       { path: "pending-project", component: PendingProjectComponent },
-     /* { path: "pending-approval", component: PendingApprovalComponent },
-      { path: "competed-project", component: CompletedProjectComponent },
-      { path: "change-password", component: ChangePasswordComponent },//panel -> change password
-      { path: "forgot-password", component: ForgotPasswordComponent },
       { path: "add-projectTeam", component: AddProjectTeamComponent },
       { path: "list-projectTeam", component: ListProjectTeamComponent },
-      
+      /*{ path: "competed-project", component: CompletedProjectComponent },
+      { path: "change-password", component: ChangePasswordComponent },//panel -> change password
+      { path: "forgot-password", component: ForgotPasswordComponent },
+      { path: "addTeamMember/:projectId", component: AddTeamMemberComponent },
+      { path: "assignTask/:user", component: AssignTaskComponent },
+      { path: "assignModule/:user", component: AssignModuleComponent },*/
       //reports
-      { path: "user-report",component:UserReportComponent},
-      {path:"project-report",component:ProjectReportComponent},
-      {path:"task-report",component:TaskReportComponent},
-      {path:"developer-report",component:DevloperReportComponent}*/
+      { path: "user-report", component: UserReportComponent },
+      { path: "project-report", component: ProjectReportComponent },
+      { path: "task-report", component: TasksReportComponent },
+      // { path: "developer-report", component:DevloperReportComponent },
+      { path: "bug-report", component: BugReportComponent }
     ]
   },
-  /*{
+  {
     path: "project-manager", component: ProjectManagerComponent, children: [
       { path: "project-manager-dashboard", component: ProjectManagerDashboardComponent },
       { path: "add-users", component: AddUsersComponent },
       { path: "list-users", component: ListUsersComponent },
       { path: "list-projects", component: ListProjectsComponent },
+      { path: "edit-projects/:projectId", component: EditProjectsComponent },
       { path: "pending-projects", component: PendingProjectsComponent },
       { path: "completed-projects", component: CompletedProjectsComponent },
       { path: "add-modules", component: AddModulesComponent },
       { path: "list-modules", component: ListModulesComponent },
-      { path: "edit-modules/:modulesId", component: EditModulesComponent }
+      { path: "edit-modules/:moduleId", component: EditModulesComponent },
+      { path: "viewTeam/:projectId", component: ViewTeamComponent },
+      { path: "addTeamMember/:projectId", component: AddTeamMembersComponent },
+      { path: "assign-Tasks/:user", component: AssignTasksComponent },
+      { path: "add-tasks", component: AddTasksComponent },
+      { path: "list-tasks", component: ListTasksComponent },
+      { path: "modules-report", component: ModulesReportComponent },
+      { path: "tasks-report", component: TasksReportComponent },
+      { path: "change-Password", component: ChangepasswordComponent }
     ]
-  }*/
+  },
+  /*{
+    path: "developer", component: DeveloperComponent, children: [
+      { path: "developer-dashboard", component: DeveloperDashboardComponent },
+      { path: "change-password", component: ChangePasswordComponent }
+
+    ]
+  },*/
 ];
 
 @NgModule({

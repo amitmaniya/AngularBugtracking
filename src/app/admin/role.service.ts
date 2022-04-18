@@ -1,56 +1,99 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { AnyForUntypedForms } from '@angular/forms';
+import { Observable, ObservedValueOf } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RoleService {
 
-  constructor(private httpClient:HttpClient) { }
-  ngInit():void{
+  constructor(private httpClient: HttpClient) { }
+  ngInit(): void {
 
   }
-  addRole(role:any):Observable<any>{
+  addRole(role: any): Observable<any> {
     //console.log(role);
     //node API
-    return this.httpClient.post("http://localhost:3000/roles",role)
+    return this.httpClient.post("http://localhost:3000/roles", role)
 
-  }  
-  getAllRoles():Observable<any>{
+  }
+  getAllRoles(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles")
   }
-  deleteRole(roleId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/roles/"+roleId)
+  getRoles(): Observable<any> {//devloper,tester
+    return this.httpClient.get("http://localhost:3000/role")
   }
-  getRoleById(roleId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/roles/"+roleId)
+  deleteRole(roleId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/roles/" + roleId)
   }
-  updateRole(role:any):Observable<any>{
-    return this.httpClient.put("http://localhost:3000/roles",role)
+  changeStatus(roleId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/roleStatus/" + roleId)
   }
-  getAllUsers():Observable<any>{
+  getRoleById(roleId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/roles/" + roleId)
+  }
+  updateRole(role: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/roles", role)
+  }
+  getAllUsers(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/users")
   }
-  deleteUser(userId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/users/"+userId)
+  getAllUser(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/usersforProjectManager")
   }
-  getUserById(userId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/users/"+userId)
+  deleteUser(userId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/users/" + userId)
   }
-  updateUser(user:any):Observable<any>{
-    return this.httpClient.put("http://localhost:3000/users",user)
+  getUserById(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/users/" + userId)
   }
-  addProject(project:any):Observable<any>{
-    return this.httpClient.post("http://localhost:3000/projects",project)
+  updateUser(user: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/users", user)
   }
-  getAllProject():Observable<any>{
-    return this.httpClient.get("http://localhost:3000/projects")
-  }
-  deleteProject(projectId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/projects/"+projectId)
-  }  
-  getotp():Observable<any>{
+  getotp(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles")
+  }
+  disableUser(user: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/disableuser", user)
+  }
+  getPendingUsers(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/pendingusers")
+  }
+  approveUser(user: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/approveUser", user)
+  }
+  updatePassword(password: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/changePassword", password)
+  }
+  getUserbyRole(role: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getUserbyRole/" + role)
+  }
+  getAllStatus(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/status")
+  }
+  getAllBugStatus(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/bugStatus")
+  }
+  getprojectbyStatus(status: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getprojectbyStatus/" + status)
+  }
+  getTaskbyProject(project: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/getTaskbyProject", project)
+  }
+  getTaskbyDevelop(devloper: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/getTaskbyDevelop", devloper)
+  }
+  getuserName(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getuserName/" +userId)
+  }
+  getModulesbyStatus(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getModulebyStatus/" +statusId)
+  }
+  getTaskbyStatus(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTaskbyStatus/" +statusId)
+  }
+  getUsersById(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getUsersById/" +userId)
   }
 }

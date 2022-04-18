@@ -34,6 +34,29 @@ import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 import { ListModuleComponent } from './admin/list-module/list-module.component';
 import { ListProjectTeamComponent } from './admin/list-project-team/list-project-team.component';
 import { ListTaskComponent } from './admin/list-task/list-task.component';
+import { AddModulesComponent } from './projectManager/add-modules/add-modules.component';
+import { AddTasksComponent } from './projectManager/add-tasks/add-tasks.component';
+import { AddTeamMembersComponent } from './projectManager/add-team-members/add-team-members.component';
+import { AddUsersComponent } from './projectManager/add-users/add-users.component';
+import { AssignTasksComponent } from './projectManager/assign-tasks/assign-tasks.component';
+import { CompletedProjectsComponent } from './projectManager/completed-projects/completed-projects.component';
+import { EditModulesComponent } from './projectManager/edit-modules/edit-modules.component';
+import { EditProjectsComponent } from './projectManager/edit-projects/edit-projects.component';
+import { ListModulesComponent } from './projectManager/list-modules/list-modules.component';
+import { ListProjectsComponent } from './projectManager/list-projects/list-projects.component';
+import { ListTasksComponent } from './projectManager/list-tasks/list-tasks.component';
+import { ListUsersComponent } from './projectManager/list-users/list-users.component';
+import { ModulesReportComponent } from './projectManager/modules-report/modules-report.component';
+import { PendingProjectsComponent } from './projectManager/pending-projects/pending-projects.component';
+import { ProjectManagerDashboardComponent } from './projectManager/project-manager-dashboard/project-manager-dashboard.component';
+import { ProjectManagerHeaderComponent } from './projectManager/project-manager-header/project-manager-header.component';
+import { ProjectManagerSlidebarComponent } from './projectManager/project-manager-slidebar/project-manager-slidebar.component';
+import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
+import { TasksReportComponent } from './projectManager/tasks-report/tasks-report.component';
+import { ViewTeamComponent } from './projectManager/view-team/view-team.component';
+import { TaskReportComponent } from './admin/task-report/task-report.component';
+import { UserReportComponent } from './admin/user-report/user-report.component';
+import { ProjectReportComponent } from './admin/project-report/project-report.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +86,30 @@ import { ListTaskComponent } from './admin/list-task/list-task.component';
     EditModuleComponent,
     ListModuleComponent,
     ListProjectTeamComponent,
-    ListTaskComponent
+    ListTaskComponent,
+    AddModulesComponent,
+    AddTasksComponent,
+    AddTeamMembersComponent,
+    AddUsersComponent,
+    AssignTasksComponent,
+    CompletedProjectsComponent,
+    EditModulesComponent,
+    EditProjectsComponent,
+    ListModulesComponent,
+    ListProjectsComponent,
+    ListTasksComponent,
+    ListUsersComponent,
+    ModulesReportComponent,
+    PendingProjectsComponent,
+    ProjectManagerDashboardComponent,
+    ProjectManagerHeaderComponent,
+    ProjectManagerSlidebarComponent,
+    ProjectManagerComponent,
+    TasksReportComponent,
+    ViewTeamComponent,
+    TaskReportComponent,
+    UserReportComponent,
+    ProjectReportComponent
   ],
   imports: [
     BrowserModule,
