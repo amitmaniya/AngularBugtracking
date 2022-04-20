@@ -33,7 +33,7 @@ export class ListUserComponent implements OnInit {
   }
   getAllUser(){
     this.roleService.getAllUsers().subscribe(resp=>{
-      //console.log(resp);
+      console.log(resp);
        this.users =  resp.data 
     }) 
   }

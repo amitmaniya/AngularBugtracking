@@ -2,8 +2,7 @@
     <div style="width: 1100px;">
       <div class="block-header">
           <div class="row">
-              <div class="col-lg-7 col-md-6 col-sm-12">
-                  <br>
+              <div class="col-lg-7 col-md-6 col-sm-12"><br>
                   <h3>&nbsp;&nbsp;&nbsp;Add User</h3>
                   <ul class="breadcrumb">
                       <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
@@ -11,7 +10,7 @@
                       <li class="breadcrumb-item"><a href="javascript:void(0);">Users</a></li>
                       <li class="breadcrumb-item active">Add Users</li>
                   </ul>
-                  </div>
+              </div>
           </div>
       </div>
       <div class="row clearfix">
@@ -22,7 +21,7 @@
 
                           <div class="row clearfix">
                               <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                &nbsp;&nbsp;  <label for="email_address_2">User Name</label>
+                                &nbsp;&nbsp;    <label for="email_address_2">User Name</label>
                               </div>
                               <div class="col-lg-10 col-md-10 col-sm-8">
                                   <div class="form-group">
@@ -46,7 +45,7 @@
 
                           <div class="row clearfix">
                               <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                &nbsp;&nbsp; <label for="email_address_2">Gender</label>
+                                &nbsp;&nbsp;   <label for="email_address_2">Gender</label>
                               </div>
                               <div class="col-lg-10 col-md-10 col-sm-8">
                                   <div class="form-group">&nbsp;&nbsp;
@@ -57,9 +56,20 @@
                               </div>
                              
                           </div>
+
+                          <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                &nbsp;&nbsp;   <label for="email_address_2">Password</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" [(ngModel)]="password" value="Password" placeholder="Password (default)" required>
+                            </div>
+                            </div>
+                        </div>
                           <div class="row clearfix">
                               <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                &nbsp;&nbsp; <label for="email_address_2">Contact Number</label>
+                                &nbsp;&nbsp;   <label for="email_address_2">Contact Number</label>
                               </div>
                               <div class="col-lg-10 col-md-10 col-sm-8">
                                   <div class="form-group">
@@ -72,13 +82,13 @@
 
                       <div class="row clearfix">
                           <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                            &nbsp;&nbsp;&nbsp; <label for="email_address_2">Role</label>
+                            &nbsp;&nbsp;  <label for="email_address_2">Role</label>
                           </div>
                           <div class="col-lg-10 col-md-10 col-sm-8">
                               <div class="form-group">
                                   <select [(ngModel)]="role" placeholder="Role">
-                                      <option value="6228efec12209b8603f2d882">Developer</option>
-                                      <option value="6228eff112209b8603f2d884">Tester</option>
+                                      <option value="62527dc4c180ef48aaa83736">Developer</option>
+                                      <option value="62527dccc180ef48aaa83738">Tester</option>
                                   </select>
                               </div>
                           </div>

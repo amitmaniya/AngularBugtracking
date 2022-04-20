@@ -9,36 +9,61 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./list-project-team.component.css']
 })
 export class ListProjectTeamComponent implements OnInit {
-
-  projects:Array<any> = []
-  constructor(private projectService:ProjectService, private toastrService:ToastrService, private route:Router) { }
+  projectId: string = ""
+  status: string = ""
+  button: string = ""
+  projects: Array<any> = []
+  projectTeam: Array<any> = []
+  constructor(private projectService: ProjectService, private toastrService: ToastrService, private route: Router) { }
 
   ngOnInit(): void {
-          this.getAllProject()
+    this.projectService.getAllProject().subscribe(resp => {
+      this.projects = resp.data
+    })
   }
-  deleteProject(projectId:any){
-    this.projectService.deleteProject(projectId).subscribe(resp=>{
-      if(resp.status=200){
-        this.toastrService.success("",resp.msg,{timeOut:3000})
-        this.getAllProject()
+
+  getProjectTeambyProject() {
+    console.log(this.projectId);
+    
+    this.projectService.getProjectTeambyProject(this.projectId).subscribe(resp => {
+      console.log(resp);
+      this.projectTeam = resp.data
+    })
+  }
+  action(user: any) {
+    this.projectService.disableUserForProject(user).subscribe(resp => {
+      if (resp.status == 200) {
+        this.toastrService.success("", resp.msg, { timeOut: 3000 })
+        this.getProjectTeambyProject();
       }
-      else{
-        this.toastrService.error("",resp.msg,{timeOut:3000})
+      else {
+        this.toastrService.error("", resp.msg, { timeOut: 3000 })
       }
     })
   }
-  
-  editProject(projectId:any){
-    this.route.navigateByUrl("/admin/editproject/"+projectId)
+  addMemberTeam() {
+    if (this.projectId == "") {
+      this.toastrService.error("", "Please Choose Project", { timeOut: 3000 })
+    }
+    else {
+      this.route.navigateByUrl("/admin/addTeamMember/" + this.projectId)
+    }
   }
-  getAllProject(){
-    this.projectService.getAllProject().subscribe(resp=>{
-      this.projects =  resp.data
-      
-      //console.log(resp);
-      //console.log(this.projects);
-      
-    }) 
+  assignTask(user: any) {
+    //console.log(user);
+    if (user.role == "62527dc4c180ef48aaa83736") {
+      localStorage.setItem("projectId", this.projectId)
+      this.route.navigateByUrl("/admin/assignTask/" + user._id)
+    }
+    else if(user.role == "62527dccc180ef48aaa83738") {
+      localStorage.setItem("projectId", this.projectId)
+      this.route.navigateByUrl("/admin/assignModule/" + user._id)
+    }
+    else{
+      this.toastrService.error("","You can not assign Task to Tester!",{timeOut:3000})
+    }
+
   }
+
 
 }

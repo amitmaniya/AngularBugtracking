@@ -24,7 +24,7 @@ export class AddProjectTeamComponent implements OnInit {
     this.projectService.getAllProject().subscribe(resp => {
       this.project = resp.data
     })
-    this.projectService.getAllManager().subscribe(resp => {
+    this.projectService.getAllManagers().subscribe(resp => {
       this.managers = resp.data
     })
     this.projectService.getAllDeveloper().subscribe(resp => {
@@ -37,29 +37,32 @@ export class AddProjectTeamComponent implements OnInit {
 
   addProjectTeam() {
     let project = { projectId: this.projectId, }
-    console.log(this.developer);
-    console.log(this.tester);
-    console.log(this.projectManager);
+    //console.log(this.developer);
+    //console.log(this.tester);
+    //console.log(this.projectManager);
 
     for (let i = 0; i < this.developer.length; i++) {
       this.projectService.addProjectTeam({
         projectId: this.projectId,
-        projectTeamMember: this.developer[i]
-      })
+        projectTeamMember: this.developer[i],
+        role:"62527dc4c180ef48aaa83736"
+      }).subscribe()
     }
 
     for (let i = 0; i < this.projectManager.length; i++) {
       this.projectService.addProjectTeam({
         projectId: this.projectId,
-        projectTeamMember: this.projectManager[i]
-      })
+        projectTeamMember: this.projectManager[i],
+        role:"62527dbdc180ef48aaa83734"
+      }).subscribe()
     }
 
     for (let i = 0; i < this.tester.length; i++) {
       this.projectService.addProjectTeam({
         projectId: this.projectId,
-        projectTeamMember: this.tester[i]
-      })
+        projectTeamMember: this.tester[i],
+        role:"62527dccc180ef48aaa83738"
+      }).subscribe()
     }
 
     this.router.navigateByUrl("/admin/list-projectTeam")

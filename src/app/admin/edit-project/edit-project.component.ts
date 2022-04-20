@@ -48,6 +48,7 @@ export class EditProjectComponent implements OnInit {
       description: this.projectDescription,
       projectManagerID: this.projectManager,
       estimatedHours: this.estimateHours,
+      projectTechnology:this.projectTechnology,
       statusId : this.status
     }
     console.log("update");

@@ -39,42 +39,42 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable"
+                    <table class=" table-bordered table-striped table-hover js-basic-example dataTable"
                       id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                       <thead>
                         <tr role="row">
-                          <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                          <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                             colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending"
-                            style="width: 139.203px;"> Project Name</th>
-                          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
-                            aria-label="Office: activate to sort column ascending" style="width: 200px;">Project Manager
+                            style="padding-left: 30px; width: 120.203px;"> Project Name</th>
+                          <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                            aria-label="Office: activate to sort column ascendistyle" style="padding-left: 30px; width: 120.203px;">Project Manager
                           </th>
-                          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
-                            aria-label="Office: activate to sort column ascending" style="width: 200px;">Description
+                          <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                            aria-label="Office: activate to sort column ascendistyle" style="padding-left: 70px; width: 300px;">Description
                           </th>
-                          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
-                            aria-label="Age: activate to sort column ascending" style="width: 35.0781px;">Technology
+                          <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                            aria-label="Age: activate to sort column ascending" style="padding-left: 30px; width: 120.203px;">Technology
                           </th>
-                          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
-                            aria-label="Age: activate to sort column ascending" style="width: 75.0781px;">Start Date
+                          <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                            aria-label="Age: activate to sort column ascending" style="padding-left: 30px; width: 120.203px;">Start Date
                           </th>
-                          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
-                            aria-label="Start date: activate to sort column ascending" style="width: 125.0938px;">
+                          <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                            aria-label="Start date: activate to sort column ascending" sstyle="padding-left: 50px; width: 120.203px;">
                             Estimated Hours</th>
-                          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
-                            aria-label="Salary: activate to sort column ascending" style="width: 58.5156px;">Status</th>
+                          <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                            aria-label="Salary: activate to sort column ascending" style="padding-left: 30px; width: 120.203px;">Status</th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr *ngFor="let project of projects">
-                          <td>{{project.projectTitle}}</td>
-                          <td>{{project.projectManagerID.firstName}}</td>
+                          <td style="padding-left: 20px;">{{project.projectTitle}}</td>
+                          <td style="padding-left: 20px;">{{project.projectManagerID.firstName}}</td>
                           <td>{{project.description}}</td>
-                          <td>{{project.technology}}</td>
-                          <td>{{project.startDate}}</td>
-                          <td>{{project.estimatedHours}}</td>
-                          <td>{{project.statusId.statusName}}</td>
+                          <td style="padding-left: 20px;">{{project.technology}}</td>
+                          <td style="padding-left: 20px;">{{project.startDate}}</td>
+                          <td style="padding-left: 20px;">{{project.estimatedHours}}</td>
+                          <td style="padding-left: 20px;">{{project.statusId.statusName}}</td>
                         </tr>
                       </tbody>
                     </table>

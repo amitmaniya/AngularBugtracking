@@ -19,7 +19,8 @@ export class AddProjectComponent implements OnInit {
   managers: Array<any> = []
   ngOnInit(): void {
       this.projectService.getAllManager().subscribe(resp => {
-        this.managers = resp.data  
+        console.log(resp);
+                this.managers = resp.data  
       })
     }
 

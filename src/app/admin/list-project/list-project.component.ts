@@ -34,9 +34,10 @@ export class ListProjectComponent implements OnInit {
   }
   getAllProject(){
     this.projectService.getAllProject().subscribe(resp=>{
+      console.log(resp);
       this.projects =  resp.data
       
-      //console.log(resp);
+      
       //console.log(this.projects);
       
     }) 
