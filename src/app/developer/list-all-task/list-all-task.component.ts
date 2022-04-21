@@ -16,8 +16,10 @@ export class ListAllTaskComponent implements OnInit {
   devId: string = ""
   projects: Array<any> = []
   tasks: Array<any> = []
-  priority: string = ""
-  constructor(private projectService: ProjectService, private roleService: RoleService, private toastrService: ToastrService,private route:Router) { }
+  priority: Array<any> = []
+  projectName: Array<any> = []
+  moduleName: Array<any> = []
+  constructor(private projectService: ProjectService, private roleService: RoleService, private toastrService: ToastrService, private route: Router) { }
 
 
   ngOnInit(): void {
@@ -25,20 +27,26 @@ export class ListAllTaskComponent implements OnInit {
     let user = { devId: this.devId }
     this.roleService.getTaskbyDevelop(user).subscribe(resp => {
       this.tasks = resp.data
+      console.log(resp.data);
 
       for (let i = 0; i < this.tasks.length; i++) {
-        this.roleService.getpriorityName(resp.data[0].taskId.priorityId).subscribe(resp => {
+        this.roleService.getpriorityName(resp.data[i].taskId.priorityId).subscribe(resp => {
+          console.log(resp);
           this.priority = resp.data[0].priorityName
         })
       }
     })
   }
+
+
   submitTask(taskId: any) {
     this.projectService.getTaskById(taskId).subscribe(resp => {
-      if(resp.data.testerId!=null){
+      if (resp.data.testerId != null) {
         this.toastrService.error("", "Already Submitted!", { timeOut: 3000 })
+
       }
-      else{
+
+      else {
         this.route.navigateByUrl("/developer/submit-task/" + taskId)
       }
     })

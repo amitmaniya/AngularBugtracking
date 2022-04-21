@@ -73,6 +73,7 @@ import { TesterDashboardComponent } from './tester/tester-dashboard/tester-dashb
 import { TesterComponent } from './tester/tester/tester.component';
 import { TestTaskComponent } from './tester/test-task/test-task.component';
 import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 
 const routes: Routes = [
@@ -80,7 +81,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
   { path: "forgotpassword", component: ForgotpasswordComponent },
-  /*{ path: "changepassword", component: ChangepasswordComponent },*/
+  { path: "changepassword", component: ChangepasswordComponent },
   { path: "logout", component: LogoutComponent },
   {
     path: "admin", component: AdminComponent, children: [

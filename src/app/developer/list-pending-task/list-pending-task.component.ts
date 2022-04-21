@@ -17,19 +17,21 @@ export class ListPendingTaskComponent implements OnInit {
   projects: Array<any> = []
   pendingTasks: Array<any> = []
   priority: string = ""
+  projectName:string=""
   constructor(private projectService: ProjectService, private roleService: RoleService, private toastrService: ToastrService, private route: Router) { }
 
 
   ngOnInit(): void {
     this.devId = localStorage.getItem("userId") as string
     this.projectService.getPendingTaskforDev(this.devId).subscribe(resp => {
-     // console.log(resp);
+      console.log(resp);
       
       this.pendingTasks = resp.data
       for (let i = 0; i < this.pendingTasks.length; i++) {
         this.roleService.getpriorityName(resp.data[0].taskId.priorityId).subscribe(resp => {
           this.priority = resp.data[0].priorityName
         })
+        
       }
       
     })

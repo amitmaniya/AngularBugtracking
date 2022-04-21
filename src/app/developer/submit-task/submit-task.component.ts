@@ -35,7 +35,9 @@ export class SubmitTaskComponent implements OnInit {
       this.TaskName = resp.data.taskName
       this.projectId = resp.data.projectId._id
       this.moduleId=resp.data.moduleId._id
-      this.projectService.getTaskbyProject(resp.data.projectId._id).subscribe(resp => {
+      this.projectService.getTesterbyProject(resp.data.projectId._id).subscribe(resp => {
+        // c onsole.log(resp);
+        
         this.tester = resp.data
       })
     })

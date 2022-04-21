@@ -90,6 +90,8 @@ import { EditBugComponent } from './tester/edit-bug/edit-bug.component';
 import { TesterListAllTaskComponent } from './tester/tester-list-all-task/tester-list-all-task.component';
 import { TestTaskComponent } from './tester/test-task/test-task.component';
 import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+
 
 
 
@@ -166,6 +168,8 @@ import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
     CompletedProjectComponent,
     PendingApprovalComponent,
     AssignTaskComponent,
+    ChangepasswordComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -33,7 +33,7 @@ export class TesterListAllTaskComponent implements OnInit {
   
   submitTask(taskId:any) {
     this.projectService.getTaskById(taskId).subscribe(resp => {
-      if(resp.data.bugStatus!="625030ca592b3cd09e3a96df"){
+      if(resp.data.bugStatus!="621474df5ee560ca51b37eea"){
         this.toastrService.error("", "Already Submitted!", { timeOut: 3000 })
       }
       else{

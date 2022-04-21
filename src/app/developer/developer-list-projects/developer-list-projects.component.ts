@@ -26,7 +26,7 @@ export class DeveloperListProjectsComponent implements OnInit {
   }
   getAllProject() {
     this.projectService.getProjectforDev(this.devId).subscribe(resp => {
-      // console.log(resp);
+      console.log(resp.data);
       this.projects = resp.data
       for (let i = 0; i < this.projects.length; i++) {
         this.roleService.getuserName(resp.data[i].projectId.projectManagerID).subscribe(resp => {
